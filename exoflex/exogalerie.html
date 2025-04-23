@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+        }
+        h1
+        {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            margin: 0;
+        }
+
+        .article-list
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10%;
+            padding-top: 100px;
+            gap: 20px;
+            @media (max-width:1171px) {
+                padding: 10px;
+            }
+        }
+
+        article
+        {
+            width: 33%;
+            border: solid black 1px;
+            display: flex;
+            flex-direction: row;
+            padding: 25px;
+            align-items: center;
+            gap: 25px;
+            min-width: 400px;
+            border-radius: 10px;
+            img{display: block; width: 50px; height: 50px;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Galerie d'image avec flexbox</h1>
+    
+    <div class="article-list">
+        <article>
+            <img alt="" src="https://placehold.co/50x50">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, officia dicta sit recusandae, eum consectetur temporibus facilis inventore est repellendus eaque! Nihil reprehenderit aperiam officia corrupti, harum possimus libero impedit!</p>
+        </article>
+        <article>
+            <img alt="" src="https://placehold.co/250x250">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, officia dicta sit recusandae, eum consectetur temporibus facilis inventore est repellendus eaque! Nihil reprehenderit aperiam officia corrupti, harum possimus libero impedit!</p>
+        </article>
+        <article>
+            <img alt="" src="https://placehold.co/250x250">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, officia dicta sit recusandae, eum consectetur temporibus facilis inventore est repellendus eaque! Nihil reprehenderit aperiam officia corrupti, harum possimus libero impedit!</p>
+        </article>
+        <article>
+            <img alt="" src="https://placehold.co/250x250">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, officia dicta sit recusandae, eum consectetur temporibus facilis inventore est repellendus eaque! Nihil reprehenderit aperiam officia corrupti, harum possimus libero impedit!</p>
+        </article>
+        <article>
+            <img alt="" src="https://placehold.co/250x250">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, officia dicta sit recusandae, eum consectetur temporibus facilis inventore est repellendus eaque! Nihil reprehenderit aperiam officia corrupti, harum possimus libero impedit!</p>
+        </article>
+        <article>
+            <img alt="" src="https://placehold.co/250x250">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, officia dicta sit recusandae, eum consectetur temporibus facilis inventore est repellendus eaque! Nihil reprehenderit aperiam officia corrupti, harum possimus libero impedit!</p>
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            display: flex; gap:10px;
+        }
+        table *, table{
+            border: solid 1px black;
+            border-collapse: collapse;
+            height:min-content
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Ville</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Jean Dupont</td>
+            <td>28</td>
+            <td>Paris</td>
+        </tr>
+        <tr>
+            <td>Marie Curie</td>
+            <td>35</td>
+            <td>Lyon</td>
+        </tr>
+        <tr>
+            <td>Paul Durand</td>
+            <td>42</td>
+            <td>Marseille</td>
+        </tr>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Categorie</th>
+                <th>Produit</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <tr>
+            <td rowspan="2">Eletronique</td>
+            <td>Smartphone</td>
+            <td>699€</td>
+        </tr>
+        <tr>
+            <td>Ordinateur</td>
+            <td>999€</td>
+        </tr>
+        <tr>
+            <td>Mobilier</td>
+            <td colspan="2">Table en bois - 150€</td>
+        </tr>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numéro d'étudiant</th>
+                <th colspan="2">Nom complet</th>
+                <th>Age</th>
+                <th>Classe</th>
+                <th>Cours</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tr>
+            <td>001</td>
+            <td>Jean</td>
+            <td>Dupont</td>
+            <td>18</td>
+            <td>Terminale S</td>
+            <td rowspan="3">Mathématiques</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Marie</td>
+            <td>Durand</td>
+            <td>17</td>
+            <td>Première L</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Paul</td>
+            <td>Martin</td>
+            <td>16</td>
+            <td>Seconde</td>
+        </tr>
+        <tr>
+            <td>004</td>
+            <td>Sophie</td>
+            <td>Bernard</td>
+            <td>18</td>
+            <td>Terminale ES</td>
+            <td rowspan="3">Physique</td>
+        </tr>
+        <tr>
+            <td>005</td>
+            <td>Lucas</td>
+            <td>Moreau</td>
+            <td>17</td>
+            <td>Première S</td>
+        </tr>
+        <tr>
+            <td>006</td>
+            <td>Emma</td>
+            <td>Leblanc</td>
+            <td>16</td>
+            <td>Seconde</td>
+        </tr>
+        <tr>
+            <td colspan="6">Total des étudiants : 6</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">numéro étudiant</th>
+                <th colspan="2">Nom et prénom</th>
+            </tr>
+
+            <tr>
+                <th>Nom</th>
+                <th>prénom</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>

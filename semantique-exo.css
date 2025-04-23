@@ -1,0 +1,477 @@
+*{        
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body > div
+{
+    padding-left:calc((100% - 1120px)/2);
+    padding-right:calc((100% - 1120px)/2);
+    @media (max-width:1120px)
+    {
+        padding-left:10px;
+        padding-right:10px;
+        flex-direction: column;
+        align-items: center;
+    };
+    margin: auto;
+}
+body>div>header
+{
+    margin: 20px 0;
+    h1
+    {
+        text-align: center;
+        font-size: 3em;
+    }
+    #desktop
+    {
+        @media (max-width:1000px) {
+            display: none;
+            visibility: hidden;
+        }
+        ul
+        {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap:5px;
+            justify-content: center;
+            border-top:solid black 1px;
+            border-bottom:solid black 1px;
+            margin:0 10%;
+    
+            li
+            {
+                padding: 20px 30px;
+                a
+                {
+                    color:black;
+                    text-transform: uppercase;
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+    #mobile
+    {
+        @media (min-width:1000px)
+        {
+            display: none;
+            visibility: hidden;
+        }
+        summary
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            &::before{
+                display: block;
+                content: url("https://placehold.co/15x15");
+                height: 1em;
+            };
+            width: min-content;
+            border: solid black 1px;
+            padding: 8px 16px;
+        }
+        nav
+        {
+            position: absolute;
+            z-index: 2;
+            ul
+            {
+                list-style: none;
+
+                background-color: white;
+                li
+                {
+                    padding: 20px 30px;
+                }
+            }
+        }
+
+    }
+}
+
+main > header
+{
+    hgroup{
+        background-image: url(https://superbdemo.com/themes/minimalistblogger/wp-content/uploads/2022/10/header-image-5.png);
+        background-size: fit;
+        height: 294.3px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+    }
+
+    >div
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px 0;
+        >section
+        {
+            position:relative;
+            border: solid black 1px;
+            width: 33%;
+            padding: 20px 10px;
+            >h3
+            {
+                margin: 0;
+                padding: 0 10px;
+                width:max-content;
+                position: absolute;
+                top:0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+            }
+        }
+        
+        @media (max-width: 850px) {
+            flex-direction: column;
+
+            >section{width: 100%;}
+        }
+    }
+}
+
+main > div
+{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    >section
+    {
+        width: 66%;
+    }
+    >aside
+    {
+        width: 32%;
+    }
+    @media (max-width:1120px)
+    {
+        flex-direction: column;
+        >section {width: 100%;}
+        >aside {width: 100%;}
+    }
+}
+
+main > div > section
+{
+    ul
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        >li
+        {
+            border: solid black 1px;
+            padding: 20px;
+            >article
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                >img 
+                {
+                    width: 100%;
+                }
+                hgroup
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    >*
+                    {
+                        width: max-content;
+                    }
+                    >h3{margin: 20px 0;}
+                    >p
+                    {
+                        position: relative;
+                        margin: 20px 0px;
+                        padding: 0 10px;
+                        @media (min-width:600px)
+                        {
+                            &::before, &::after
+                            {
+                                position: absolute;
+                                top: 50%;
+                                content:"";
+                                width: 60px;
+                                height: 0;
+                                border-bottom: solid black 1px;
+                            }
+                            &::after
+                            {
+                                right: 0;
+                                transform: translateX(100%);
+                            }
+                            &::before
+                            {
+                                left: 0;
+                                transform: translateX(-100%);
+                            }
+                        }
+                    }
+                }
+                button{width: max-content;}
+            }
+        }
+    }
+
+    nav
+    {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+main > div > aside
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    >article
+    {
+        border: solid black 1px;
+        width: 100%;
+        position: relative;
+        padding: 20px;
+        &#about-me
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            >#portrait{width: 100%;}
+            >#signature{width: 150px;}
+        }
+        &#newsletter
+        {
+            >form
+            {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                gap: 0;
+                >button{
+                    display: block;
+                    text-wrap: nowrap;
+                }
+                >input{
+                    display: block;
+                    border: solid black 1px;
+                    width: 100%;
+                }
+            }
+
+        }
+        &#popular-post
+        {
+            ul
+            {
+                list-style: none;
+                border: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                >li
+                {
+                    >article
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        height: 45px;
+                        align-content: start;
+                        justify-content: center;
+                        gap:0 10px;
+                        >img
+                        {
+                                width: 45px;
+                                height: 45px;
+                        }
+
+                        h4 {font-size: 14px; margin: 0; font-weight: normal;}
+                        time{font-size: 12px;}
+                    }
+                }
+            }
+        }
+        &#follow-me
+        {
+            ul
+            {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        &#advertisement
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        >h3
+        {
+            margin: 0;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 0;
+            left: 50%;
+            padding: 0px 20px;
+            background-color: white;
+            width: max-content;
+        }
+    }
+}
+
+footer
+{
+    padding-left:calc((100% - 1120px)/2);
+    padding-right:calc((100% - 1120px)/2);
+    @media (max-width:1120px)
+    {
+        padding-left:10px;
+        padding-right:10px;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    margin-top: 10px;
+    padding-top: 50px;
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;
+    h3{
+        font-size: 18px;
+        position:relative;
+        margin-bottom: 40px;
+        &::after
+        {
+            position: absolute;
+            left: 0;
+            border-bottom: solid grey 10px;
+            width: 60px;
+            content:"";
+            bottom: -20px;
+        }
+    };
+    display: flex;
+    >*
+    {
+        width: 33%;
+        @media (max-width:1120px)
+        {
+            width:100%;
+        }
+    }
+    p{
+        color:grey;
+        margin-bottom: 30px;
+    }
+    #footer-about-me
+    {
+
+        ul
+        {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+    }
+
+    #footer-recent-post
+    {
+        ul{
+            list-style: none;
+            flex-direction: column;
+            gap: 10px;
+            article
+            {
+                display: flex;
+                flex-direction: column;
+                height: 65px;
+                flex-wrap: wrap;
+                align-content: start;
+                justify-content: center;
+                gap: 0px 20px;
+                padding: 10px;
+                >img{width: 45px;};
+            }
+        }
+    }
+
+    #footer-newsletter
+    {
+        display: flex;
+        flex-direction: column;
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            >button{border:solid white 1px;text-wrap: nowrap;}
+            >input{width: 100%;}
+        }
+    }
+    >p
+    {
+        width: 100%;
+        text-align: center;
+        max-width: 800px;
+        color:white;
+        border-top: solid white 1px;
+        padding-top: 10px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+/*
+        GLOBAL
+*/
+
+button, .button
+{
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    display: block;
+    width: max-content;
+    text-decoration: none;
+}
+
+
+p
+{
+    position: relative;
+}

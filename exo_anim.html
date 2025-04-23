@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            width: 30%;
+            height: 200px;
+            animation: anim 4s 0s infinite alternate;
+            background-color: red;
+        }
+
+        button
+        {   
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            &:hover{
+                background-color: red
+                ;padding: 15px 20px
+            }
+            
+            transition: all 2s;
+        }
+
+        @keyframes anim {
+            0%
+            {
+                transform: translateX(0%) rotate(0deg);
+                opacity: 100%;
+            }
+            100%
+            {
+                transform: translateX(100%) rotate(calc(360*3deg));
+                
+                opacity: 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <button>btn</button>
+
+    <div class="box"></div>
+</body>
+</html>
