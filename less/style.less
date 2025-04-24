@@ -1,0 +1,99 @@
+//D2CLARATION CLASSES ET VARIABLE
+
+@text-color:black;
+@mobile-breakpoint : 1024px;
+.row
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.column
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.hide-desktop
+{
+    @media (min-width:@mobile-breakpoint)
+    {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.hide-mobile
+{
+    @media (max-width:@mobile-breakpoint)
+    {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+// ----------------------------------------
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body
+{
+    padding: 2rem;
+}
+
+header#page-header
+{
+
+    h1
+    {
+        font-size: 4em;
+        text-align: center;
+        margin-bottom:2rem;
+    }
+
+    #desktop>ul
+    {
+        .hide-mobile();
+        .row();
+        justify-content: center;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        font-size: 1.5rem;
+        width:fit-content;
+        border-top: solid @text-color 1px;
+        border-bottom: solid @text-color 1px;
+        margin: auto;
+        
+        * {
+            color:@text-color;
+        }
+    }
+
+    #mobile
+    {
+        .hide-desktop();
+        
+        summary
+        {
+            border: solid @text-color 1px;
+            width: fit-content;
+            padding: 0.5rem 1rem;
+            .row();
+            gap: 0.5rem;
+            &::before
+            {
+                content: "";
+                width: 1rem;
+                height: 1rem;
+                display: block;
+                background-image: url("https://placehold.co/50x50");
+            }
+        }
+    }
+}
